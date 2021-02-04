@@ -4,76 +4,142 @@
 
 .side-bar {
   background-color: #253141;
-  width: 300px;
+  width: 250px;
   height: 100vh;
 }
 
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: #C2EEFF;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .header-name a{
-  font-size: 16px;
-  color: #FAFAFA;
+  font-size: 20px;
+  color: #444444;
   text-decoration: none;
+  font-family: "Nico Moji";
 }
 
 .create-room a{
   font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 14px;
-  color: deepskyblue;
+  border: 1px double #888888;
+  padding: 6px;
+  color: #888888;
   text-decoration: none;
+  border-radius: 60px;
 }
 
-.rooms {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
+/* .rooms {
+  background-color: #E6FFE9;
+  height: calc(100vh - 335px);
+  padding: 0px;
+  overflow: scroll;
+} */
+
+.rooms-a {
+  background-color: #E6FFE9;
   padding: 0 20px;
   overflow: scroll;
 }
 
-.room {
-  padding: 20px 0 40px;
+/* .room {
+  padding: 0 0 20px;
+} */
+
+.room-a {
+  height: calc(100vh - 100px);
 }
 
-.room-name a {
+/* .room-name a {
   text-decoration: none;
-  color: white;
+  color: #444444;
+  padding-left: 24px;
+  font-family: "Nico Moji";
+  font-size: 20px;
+  text-decoration: none;
+} */
+
+.room-name-a {
+  text-decoration: none;
+  color: #444444;
+  padding: 50px 0 25px 58px;
+  font-family: "Nico Moji";
+  font-size: 20px;
+}
+
+.room-color {
+  color: #444444;
 }
 
 .chat {
   background-color: #FFFFFF;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px);
 }
 
 .chat-header {
   height: 100px;
-  padding: 0 40px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: #EAD9FF;
+}
+
+.chat-header-a{
+  height: 100px;
+  width: 100%;
+  /* padding: 0 595px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAD9FF;
 }
 
 .header-title {
   color: #333;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 36px;
+  margin-left: 100px;
+  font-family: "Nico Moji";
+}
+
+.header-title-a {
+  color: #333;
+  font-size: 28px;
+  margin-top: 36px;
+  margin-left: 100px;
+  font-family: "Nico Moji";
 }
 
 .header-button {
   margin-top: 40px;
+  padding-right: 50px;
+}
+
+.header-dl {
+  margin-top: 40px;
+  padding-right: 50px;
+}
+
+.delete-button {
+  font-size: 10px;
+  border: 1px double #FF69A3;
+  padding: 6px;
+  color: #FF69A3;
+  text-decoration: none;
+  border-radius: 60px;
 }
 
 .header-button a{
+  font-size: 10px;
+  border: 1px double #FF69A3;
+  padding: 6px;
+  color: #FF69A3;
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
+  border-radius: 60px;
 }
 
 .messages {
@@ -115,7 +181,7 @@
 .form {
   background-color: #DDDDDD;
   height: 90px;
-  padding: 20px 40px;
+  padding: 30px 30px;
   display: flex;
 }
 
@@ -123,11 +189,12 @@
   background-color: white;
   width: 100%;
   display: flex;
+  height: 40px;
 }
 
 .form-message {
   border: none;
-  height: 50px;
+  height: 40px;
   width: 100%;
   padding-left: 10px;
 }
@@ -137,9 +204,9 @@
   border: none;
   color: white;
   font-size: 16px;
-  height: 50px;
+  height: 40px;
   margin-left: 15px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .form-image {
@@ -148,7 +215,7 @@
   color: white;
   padding: 12px;
   width: 60px;
-  margin: 5px 10px;
+  margin: 0px;
   text-align: center;
 }
 
