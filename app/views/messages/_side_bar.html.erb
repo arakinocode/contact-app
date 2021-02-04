@@ -2,17 +2,39 @@
   <div class="header-name">
     <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
-  <div class="create-room">
+  <%# <% if current_user.id == 1 ||
+        current_user.id == 2 ||
+        current_user.id == 3 ||
+        current_user.id == 4
+  %>
+  <%# <div class="create-room">
     <%= link_to "チャットを作成する", new_room_path %>
-  </div>
-</div>
-
-<div class="rooms">
-  <% current_user.rooms.each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <%= link_to room.name, room_messages_path(room) %>
-      </div>
-    </div>
+  <%# </div>
   <% end %>
 </div>
+
+<div class="rooms-a">
+  <div class="room-a">
+    <div class="room-name-a">
+      <%= link_to @room_a, "/rooms/1/messages", {class: "room-color"} %>
+    </div>
+    <div class="room-name-a">
+      <%= link_to @room_b, "/rooms/2/messages", {class: "room-color"} %>
+    </div>
+    <div class="room-name-a">
+      <%= link_to @room_c, "/rooms/3/messages", {class: "room-color"} %>
+    </div>
+    <div class="room-name-a">
+      <%= link_to @room_d, "/rooms/4/messages", {class: "room-color"} %>
+    </div>
+  </div>
+</div>
+<%# <div class="rooms">
+  <% current_user.rooms.each do |room| %>
+    <%# <div class="room">
+      <div class="room-name">
+        <%= link_to room.name, room_messages_path(room) %>
+      <%# </div>
+    </div> %>
+  <%# <% end %>
+<%# </div> %>
