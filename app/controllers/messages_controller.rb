@@ -5,15 +5,15 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @message = Message.new
-    @messages = @room.messages.includes(:user).order("created_at DESC")
+    @messages = @room.messages.includes(:user).order('created_at DESC')
     @user = User.all
-    @room_a = Room.find_by(id:1)
+    @room_a = Room.find_by(id: 1)
     @room_a = @room_a.name
-    @room_b = Room.find_by(id:2)
+    @room_b = Room.find_by(id: 2)
     @room_b = @room_b.name
-    @room_c = Room.find_by(id:3)
+    @room_c = Room.find_by(id: 3)
     @room_c = @room_c.name
-    @room_d = Room.find_by(id:4)
+    @room_d = Room.find_by(id: 4)
     @room_d = @room_d.name
   end
 
@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
     @message = @room.messages.new(message_params)
     @user = User.find_by(id: current_user.id)
     if @message.save
-      ActionCable.server.broadcast "message_channel", content: @message , user: @user
+      ActionCable.server.broadcast 'message_channel', content: @message, user: @user
       redirect_to room_messages_path(@room)
     else
       @messages = @room.messages.includes(:user)

@@ -3,16 +3,16 @@ class RoomsController < ApplicationController
 
   def index
     @room = Room.all
-    @room_a = Room.find_by(id:1)
+    @room_a = Room.find_by(id: 1)
     @room_a = @room_a.name
-    @room_b = Room.find_by(id:2)
+    @room_b = Room.find_by(id: 2)
     @room_b = @room_b.name
-    @room_c = Room.find_by(id:3)
+    @room_c = Room.find_by(id: 3)
     @room_c = @room_c.name
-    @room_d = Room.find_by(id:4)
+    @room_d = Room.find_by(id: 4)
     @room_d = @room_d.name
   end
-  
+
   def new
     @room = Room.new
   end
@@ -32,8 +32,8 @@ class RoomsController < ApplicationController
 
   def update
     if @room = Room.find(params[:id])
-       @room.update(room_params)
-       redirect_to root_path
+      @room.update(room_params)
+      redirect_to root_path
     else
       render :edit
     end
